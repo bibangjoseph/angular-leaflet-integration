@@ -1,17 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 import { MapComponent } from './map/map.component';
 
 const routes: Routes = [
-	{
-		path: '',
-		component: MapComponent,
-		title: 'Carte'
-	}
+    {
+        path: '',
+        component: HomeComponent,
+        title: 'Page Accueil'
+    },
+    {
+        path: 'map',
+        component: MapComponent,
+        title: 'Carte'
+    },
 ];
 
 @NgModule({
-	imports: [RouterModule.forRoot(routes)],
-	exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }
